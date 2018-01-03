@@ -1,0 +1,71 @@
+<ul class="graph-diagram-markup" data-internal-scale="1" data-external-scale="1">
+  <li class="node" data-node-id="0" data-x="-196.03500986099243" data-y="-66.01178550720215">
+    <span class="caption">Person</span><dl class="properties"><dt>id</dt><dd>"auth0-id"</dd><dt>name</dt><dd>"John"</dd><dt>email</dt><dd>"john@doe.com"</dd><dt>bio</dt><dd>""</dd><dt>dob</dt><dd>""</dd><dt>street</dt><dd>""</dd><dt>city</dt><dd>""</dd><dt>zip</dt><dd>""</dd><dt>country</dt><dd>""</dd></dl></li>
+  <li class="node" data-node-id="1" data-x="153.57310718297958" data-y="383.5716209411621">
+    <span class="caption">:User:Twitter</span><dl class="properties"><dt>screen_name</dt><dd>"john"</dd></dl></li>
+  <li class="node" data-node-id="2" data-x="228.1828384399414" data-y="-66.01178550720215">
+    <span class="caption">:Meetup:Event</span><dl class="properties"><dt>title</dt><dd>"Neo4j Talk by John"</dd></dl></li>
+  <li class="node" data-node-id="3" data-x="450.4478454589844" data-y="-66.01178550720215">
+    <span class="caption">Link</span><dl class="properties"><dt>url</dt><dd>"meetup.com/group/event"</dd></dl></li>
+  <li class="node" data-node-id="4" data-x="228.1828384399414" data-y="94.85148620605469">
+    <span class="caption">:Content</span><dl class="properties"><dt>title</dt><dd>"A Neo4j Blog Post"</dd></dl></li>
+  <li class="node" data-node-id="5" data-x="450.4478454589844" data-y="185.38359451293945">
+    <span class="caption">:Link</span>
+  </li>
+  <li class="node" data-node-id="6" data-x="-196.03500986099243" data-y="-330.12804412841797">
+    <span class="caption">:Company</span><dl class="properties"><dt>name</dt><dd>"A company"</dd></dl></li>
+  <li class="node" data-node-id="7" data-x="-196.03500986099243" data-y="185.38359451293945">
+    <span class="caption">:Badge</span><dl class="properties"><dt>name</dt><dd>"member"</dd><dt>description</dt><dd>"Community Member"</dd></dl></li>
+  <li class="node" data-node-id="8" data-x="-382.317138671875" data-y="185.38359451293945">
+    <span class="caption">:Badge</span><dl class="properties"><dt>name</dt><dd>"certified"</dd></dl></li>
+  <li class="node" data-node-id="9" data-x="360.39381408691406" data-y="-308.55194091796875">
+    <span class="caption">:User:Meetup</span><dl class="properties"><dt>id</dt><dd>"some-id"</dd></dl></li>
+  <li class="node" data-node-id="10" data-x="482.4155578613281" data-y="-186.53013610839844">
+    <span class="caption">:Meetup:Group</span>
+  </li>
+  <li class="node" data-node-id="11" data-x="450.4478454589844" data-y="383.5716209411621">
+    <span class="caption">:Tweet:Twitter</span><dl class="properties"><dt>text</dt><dd>"I wrote this article 'A Neo4j Blog Post'"</dd></dl></li>
+  <li class="node" data-node-id="12" data-x="594.447509765625" data-y="304.3222351074219">
+    <span class="caption">:Tag</span><dl class="properties"><dt>name</dt><dd>"neo4j"</dd></dl></li>
+  <li class="node" data-node-id="13" data-x="594.447509765625" data-y="383.5716209411621">
+    <span class="caption">:Tag</span><dl class="properties"><dt>name</dt><dd>"contributed"</dd></dl></li>
+  <li class="relationship" data-from="0" data-to="1">
+    <span class="type">REGISTERED</span><dl class="properties"><dt>since</dt><dd>time()</dd></dl></li>
+  <li class="relationship" data-from="0" data-to="2">
+    <span class="type">CONTRIBUTED</span>
+  </li>
+  <li class="relationship" data-from="2" data-to="3">
+    <span class="type">LINKED</span>
+  </li>
+  <li class="relationship" data-from="0" data-to="4">
+    <span class="type">CONTRIBUTED</span><dl class="properties"><dt>created</dt><dd>time()</dd></dl></li>
+  <li class="relationship" data-from="4" data-to="5">
+    <span class="type">LINKED</span>
+  </li>
+  <li class="relationship" data-from="0" data-to="6">
+    <span class="type">WORKED_AT</span><dl class="properties"><dt>role</dt><dd>"A Role"</dd><dt>since</dt><dd>time()</dd></dl></li>
+  <li class="relationship" data-from="0" data-to="7">
+    <span class="type">ACHIEVED</span><dl class="properties"><dt>created</dt><dd>time()</dd></dl></li>
+  <li class="relationship" data-from="0" data-to="8">
+    <span class="type">ACHIEVED</span><dl class="properties"><dt>score</dt><dd>85</dd><dt>created</dt><dd>time()</dd></dl></li>
+  <li class="relationship" data-from="0" data-to="9"></li>
+  <li class="relationship" data-from="9" data-to="2">
+    <span class="type">RSVPED</span>
+  </li>
+  <li class="relationship" data-from="10" data-to="2">
+    <span class="type">CONTAINED</span>
+  </li>
+  <li class="relationship" data-from="0" data-to="11">
+    <span class="type">CONTRIBUTED</span>
+  </li>
+  <li class="relationship" data-from="11" data-to="5">
+    <span class="type">LINKED</span>
+  </li>
+  <li class="relationship" data-from="1" data-to="11">
+    <span class="type">POSTED</span>
+  </li>
+  <li class="relationship" data-from="11" data-to="12">
+    <span class="type">TAGGED</span>
+  </li>
+  <li class="relationship" data-from="11" data-to="13"></li>
+</ul>

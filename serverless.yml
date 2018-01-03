@@ -1,0 +1,38 @@
+service: community-api
+
+provider:
+  name: aws
+  runtime: python2.7
+  timeout: 180
+  environment: ${file(env.yml):${opt:stage}}
+
+plugins:
+  - serverless-python-requirements
+
+functions:
+  create-user:
+    name: ${opt:stage}-CommunityApiCreateUser
+    handler: handler.create_user
+    role: 'arn:aws:iam::715633473519:role/lambda_community_api'
+    events:
+      - http:
+          method: POST
+          cors: true
+          path: createUser
+          authorizer: arn:aws:lambda:us-east-1:715633473519:function:Auth0JwtAuthorizor:COMMUNITY_API
+
+  get-activities:
+    name: ${opt:stage}-CommunityApiGetActivities
+    handler: handler.get_activities
+    role: 'arn:aws:iam::715633473519:role/lambda_community_api'
+    events:
+      - http:
+          method: GET
+          cors: true
+          path: getActivities
+          authorizer: arn:aws:lambda:us-east-1:715633473519:function:Auth0JwtAuthorizor:COMMUNITY_API
+
+package:
+  exclude:
+    - node_modules/**
+    - a/**
